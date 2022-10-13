@@ -1,15 +1,10 @@
 import React from "react";
 import "./App.css";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Navigate,
-  Routes,
-} from "react-router-dom";
-import LoginPage from "./views/auth/LoginPage";
-import RegisterPage from "./views/auth/RegisterPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./views/dashboard/Dashboard";
+import LoginPage from "./views/auth/login/LoginPage";
+import RegisterPage from "./views/auth/register/RegisterPage";
 
 function App() {
   return (
