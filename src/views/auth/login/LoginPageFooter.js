@@ -27,7 +27,7 @@ const LoginPageFooter = ({ handleLogin, isFormValid }) => {
             label={"Log in"}
             additionalStles={{ marginTop: "30px" }}
             disabled={!isFormValid}
-            onClick={handleLogin()}
+            onClick={handleLogin}
           />
         </div>
       </Tooltip>

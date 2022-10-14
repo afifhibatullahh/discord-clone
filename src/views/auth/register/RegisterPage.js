@@ -1,22 +1,34 @@
 import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import AuthBox from "../../../components/box/AuthBox";
+import { getActions } from "../../../store/actions/authActions";
 import { validateRegisterForm } from "../../../utils/validator";
 import RegisterPageFooter from "./RegisterPageFooter";
 import RegisterPageInputs from "./RegisterPageInputs";
 
-const RegisterPage = () => {
+const RegisterPage = ({ register }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const [isFormValid, setIsFormValid] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsFormValid(validateRegisterForm({ email, username, password }));
   }, [email, username, password, setIsFormValid]);
 
-  const handleRegister = () => {};
+  const handleRegister = () => {
+    const userDetails = {
+      email,
+      password,
+      username,
+    };
+    console.log(userDetails);
+    register(userDetails, navigate);
+  };
 
   return (
     <AuthBox>
@@ -39,4 +51,10 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+const mapActionsToProps = (dispatch) => {
+  return {
+    ...getActions(dispatch),
+  };
+};
+
+export default connect(null, mapActionsToProps)(RegisterPage);
