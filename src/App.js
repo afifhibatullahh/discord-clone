@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./views/dashboard/Dashboard";
 import LoginPage from "./views/auth/login/LoginPage";
 import RegisterPage from "./views/auth/register/RegisterPage";
+import SnackbarNotification from "./components/feedback/SnackbarNotification";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
         </Routes>
       </Router>
+      <SnackbarNotification />
     </>
   );
 }
