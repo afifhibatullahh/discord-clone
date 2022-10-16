@@ -10,7 +10,7 @@ export const validateRegisterForm = ({ email, username, password }) => {
   return isMailValid && isPasswordValid && validateUsername(username);
 };
 
-const validateMail = (mail) => {
+export const validateMail = (mail) => {
   const regexMail =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 

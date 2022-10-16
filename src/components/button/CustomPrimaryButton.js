@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 
-const CustomPrimaryButton = ({ label, additionalStles, ...params }) => {
+const CustomPrimaryButton = ({ label, additionalStyles, ...params }) => {
   return (
     <Button
       variant="contained"
@@ -14,7 +14,7 @@ const CustomPrimaryButton = ({ label, additionalStles, ...params }) => {
         width: "100%",
         height: "40px",
       }}
-      style={additionalStles ?? {}}
+      style={additionalStyles ?? {}}
       {...params}
     >
       {label}

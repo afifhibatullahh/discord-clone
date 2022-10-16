@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import { Groups } from "@mui/icons-material";
 
 const MainPageButton = () => {
   return (
@@ -15,7 +16,9 @@ const MainPageButton = () => {
         color: "white",
         backgroundColor: "#5865F2",
       }}
-    ></Button>
+    >
+      <Groups />
+    </Button>
   );
 };
 

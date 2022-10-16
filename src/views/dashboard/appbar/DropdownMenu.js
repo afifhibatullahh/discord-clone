@@ -3,6 +3,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { IconButton } from "@mui/material";
 import { logout } from "../../../utils/auth";
+import { MoreVert } from "@mui/icons-material";
 
 export default function DropdownMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,8 +19,7 @@ export default function DropdownMenu() {
   return (
     <div>
       <IconButton onClick={handleMenuOpen} style={{ color: "white" }}>
-        {" "}
-        keluar
+        <MoreVert />
       </IconButton>
       <Menu
         id="basic-menu"
