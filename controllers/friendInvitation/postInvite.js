@@ -1,5 +1,8 @@
 const friendInvitation = require("../../models/friendInvitation");
 const user = require("../../models/user");
+const {
+  updateFriendsPendingInvitations,
+} = require("../../socketHandlers/updates/friends");
 
 const postInvite = async (req, res) => {
   const { targetMailAddress } = req.body;
@@ -44,6 +47,8 @@ const postInvite = async (req, res) => {
     senderId: userId,
     receiverId: targetUser._id,
   });
+
+  updateFriendsPendingInvitations(targetUser._id.toString());
 
   return res.status(201).send("Undangan telah dikirim");
 };
