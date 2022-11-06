@@ -24,7 +24,7 @@ apiClient.interceptors.request.use(
 
 export default apiClient;
 
-const checkResponseCode = (exception) => {
+export const checkResponseCode = (exception) => {
   const responseCode = exception?.response?.status;
 
   if (responseCode) {
