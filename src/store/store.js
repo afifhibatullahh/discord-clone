@@ -4,11 +4,13 @@ import thunk from "redux-thunk";
 import authReducer from "./reducers/authReducer";
 import snackbarReducer from "./reducers/snackbarActions";
 import friendsReducer from "./reducers/friendsReducer";
+import chatReducer from "./reducers/chatReducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
   snackbar: snackbarReducer,
   friends: friendsReducer,
+  chat: chatReducer,
 });
 
 const store = createStore(

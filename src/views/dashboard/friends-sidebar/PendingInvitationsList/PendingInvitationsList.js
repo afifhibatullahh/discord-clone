@@ -13,7 +13,6 @@ const MainContainer = styled("div")({
 });
 
 const PendingInvitationsList = ({ pendingFriendsInvitation }) => {
-  console.log(pendingFriendsInvitation);
   return (
     <MainContainer>
       {pendingFriendsInvitation?.map((invitation) => (
