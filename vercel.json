@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "chat-application",
+  "name": "discord-clone",
   "builds": [{ "src": "./server.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/" }]
 }
