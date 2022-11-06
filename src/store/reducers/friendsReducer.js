@@ -24,6 +24,7 @@ const reducer = (state = initState, action) => {
         onlineUsers: action.onlineUsers,
       };
     default:
+      return state;
   }
 };
 

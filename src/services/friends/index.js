@@ -9,3 +9,21 @@ export const sendFriendInvitation = async (data) => {
     return { error: true, exception };
   }
 };
+export const acceptFriendInvitation = async (data) => {
+  try {
+    return await axios.post("/friend-invitation/accept", data);
+  } catch (exception) {
+    checkResponseCode(exception);
+
+    return { error: true, exception };
+  }
+};
+export const rejectFriendInvitation = async (data) => {
+  try {
+    return await axios.post("/friend-invitation/reject", data);
+  } catch (exception) {
+    checkResponseCode(exception);
+
+    return { error: true, exception };
+  }
+};
